@@ -5,11 +5,25 @@ import java.util.Scanner;
 public class Vehiche {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		
+		Scanner n = new Scanner(System.in);
+		
 		String state = "KL";
-		String district;
+		
+		System.out.println("State : "+state);
 		System.out.println("Enter the sub number : ");
-		int dis = sc.nextInt();
+		int dis = n.nextInt();
+		
+		System.out.println("Enter remaining number : ");
+		String n3 = n.next();
+		
+		System.out.println("The reg number is :"+state+" "+dis+" "+n3);
+		System.out.println("State : Kerala");
+		System.out.println("District is : " + district(dis));
+	}
+	
+	public static String district(int dis) {
+		String district="";
 		switch(dis) {
 		case 1: district = "Thiruvananthapuram";
 				break;
@@ -27,16 +41,11 @@ public class Vehiche {
 				break;
 		case 8: district = "Thrissur";
 				break;
-		default: System.out.println("invalid code");
+		default: System.out.println("Invalid code");
 		        break;
 		}
-		System.out.println("The remaining numbers");
-		int n2=sc.nextInt();
-		System.out.println("District");
-		String dist=sc.next();
-		System.out.println("State:Kerala"+dist+n2);
+		return district;
+		
 	}
 
 }
-
-
